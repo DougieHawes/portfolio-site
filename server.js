@@ -5,10 +5,15 @@ require("dotenv").config();
 const cors = require("cors");
 const express = require("express");
 const mongoose = require("mongoose");
+const path = require("path");
 
 // variables
-const mongoUri = process.env.MONGODB_URI;
 const port = process.env.PORT || 5000;
+
+// connect mongoose
+const connectDB = require("./config/db");
+
+connectDB();
 
 // initialise express
 const app = express();
@@ -25,8 +30,12 @@ app.use("/profile", require("./routes/profileRoute"));
 app.use("/skills", require("./routes/skillsRoute"));
 app.use("/work", require("./routes/workRoute"));
 
-// connect mongoose
-mongoose
-  .connect(mongoUri)
-  .then(() => console.log("mongodb connected"))
-  .catch((err) => console.log(err));
+// server static assets in production
+if (process.env.NODE_ENV === "production") {
+  // set static folder
+  app.use(express.static("client/build"));
+
+  app.get("*", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
+  });
+}
