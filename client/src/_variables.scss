@@ -1,0 +1,23 @@
+$colour1: #3b2f2f;
+$colour2: #f8f8f8;
+$colour3: #128482;
+$colour4: #d0491e;
+
+$cursor1: url("./media/cursor.png"), auto;
+$cursor2: url("./media/pointer.png"), auto;
+$cursor3: url("./media/type.png"), auto;
+
+$font1: rockwell;
+
+$padding1: 9px 2%;
+$padding2: 0 2%;
+$padding3: 2px 2%;
+
+$shadow1: 0.5px 0.5px 2px $colour1;
+$shadow2: 1px 1px 2px $colour1;
+$shadow3: 2px 2px 2px $colour1;
+
+@mixin centre {
+  margin-left: 50%;
+  transform: translateX(-50%);
+}

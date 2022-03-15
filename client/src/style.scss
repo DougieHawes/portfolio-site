@@ -1,0 +1,91 @@
+@import "./variables.scss";
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0);
+}
+::-webkit-scrollbar-thumb {
+  background: $colour4;
+  border-radius: 3px;
+}
+
+* {
+  box-sizing: border-box;
+  color: $colour1;
+  cursor: $cursor1;
+  font-family: sans-serif;
+  list-style: none;
+  margin: 0;
+  outline: none;
+  text-decoration: none;
+  user-select: none;
+}
+
+a,
+button,
+.link-hover,
+.nav-link,
+.navbar-icon,
+.navbar-icon-bar,
+.title-image,
+.work-option {
+  cursor: $cursor2;
+}
+
+.input1,
+.input2,
+.input3,
+.input5,
+textarea {
+  cursor: $cursor3;
+}
+
+.app {
+  background-blend-mode: screen;
+  background-color: rgba($color: $colour2, $alpha: 0.42);
+  background-image: url("./media/background.jpg");
+  background-position: center;
+  background-size: cover;
+  max-height: 100vh;
+  min-height: 100vh;
+  overflow: hidden;
+  .background-video {
+    min-height: 100%;
+    min-width: 100%;
+    position: fixed;
+  }
+  .video-veneer {
+    background-color: rgba($color: $colour2, $alpha: 0.42);
+    height: 100%;
+    width: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+  }
+}
+
+.form {
+  max-width: 700px;
+  overflow-x: scroll;
+  width: 100%;
+  @include centre;
+  .form-body {
+    overflow: scroll;
+    padding: 0 1%;
+  }
+}
+
+.loader {
+  filter: drop-shadow(4px 4px 1px $colour1);
+  margin-top: 210px;
+  @include centre;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: $font1;
+}

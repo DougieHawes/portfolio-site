@@ -1,0 +1,1 @@
+.checkboxes{display:grid;grid-template-columns:repeat(6, 1fr)}.dashboard{align-items:center;display:flex;flex-direction:column}.profile-inputs{overflow:scroll}.profile-inputs .profile-details{display:grid;grid-gap:6px;grid-template-columns:1fr 1fr}
