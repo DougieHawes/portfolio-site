@@ -16,7 +16,7 @@ connectDB();
 const app = express();
 
 app.use(cors());
-app.use(express.json());
+app.use(express.json({ extended: false }));
 
 app.listen(5000, console.log(`express app running on PORT:${port}`));
 
@@ -27,9 +27,7 @@ app.use("/profile", require("./routes/profileRoute"));
 app.use("/skills", require("./routes/skillsRoute"));
 app.use("/work", require("./routes/workRoute"));
 
-// server static assets in production
 if (process.env.NODE_ENV === "production") {
-  // set static folder
   app.use(express.static("client/build"));
 
   app.get("*", (req, res) => {
