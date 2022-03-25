@@ -1,6 +1,3 @@
-// environment variables
-require("dotenv").config();
-
 // import dependencies
 const cors = require("cors");
 const express = require("express");

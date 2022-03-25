@@ -160,7 +160,7 @@ const Contact = () => {
       <form className="contact-form" onSubmit={handleSubmit}>
         <div
           className="contact-inputs"
-          style={{ maxHeight: getHeight(180, 170) }}
+          style={{ maxHeight: getHeight(210, 250) }}
         >
           <div className="contact-details">
             <div className="contact-details-column">

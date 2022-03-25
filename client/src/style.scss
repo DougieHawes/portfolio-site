@@ -51,19 +51,6 @@ textarea {
   max-height: 100vh;
   min-height: 100vh;
   overflow: hidden;
-  .background-video {
-    min-height: 100%;
-    min-width: 100%;
-    position: fixed;
-  }
-  .video-veneer {
-    background-color: rgba($color: $colour2, $alpha: 0.42);
-    height: 100%;
-    width: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-  }
 }
 
 .form {

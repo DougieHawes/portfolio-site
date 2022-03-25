@@ -23,9 +23,6 @@ import CreateWork from "./components/routes/private/CreateWork.js";
 import Dashboard from "./components/routes/private/Dashboard.js";
 import UpdateProfile from "./components/routes/private/UpdateProfile.js";
 
-// import media
-import backgroundVideo from "./media/background-video.mp4";
-
 // import styles
 import "./style.min.css";
 
@@ -47,10 +44,6 @@ const App = () => {
         />
       ) : (
         <>
-          <video className="background-video" loop autoPlay muted>
-            <source src={backgroundVideo} type="video/mp4"></source>
-          </video>
-          <div className="video-veneer"></div>
           <Routes>
             {/* auth routes */}
             <Route exact path="/secret" element={<SignIn />} />

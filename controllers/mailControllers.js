@@ -2,7 +2,9 @@
 // const nodemailer = require("nodemailer");
 const sendgrid = require("@sendgrid/mail");
 
-sendgrid.setApiKey(process.env.SENDGRID_API_KEY);
+const config = require("config");
+
+sendgrid.setApiKey(config.get("SENDGRID_API_KEY"));
 
 exports.sendMail = async (req, res) => {
   const { email, name, linkedin, phone, title, text, twitter } = req.body;
